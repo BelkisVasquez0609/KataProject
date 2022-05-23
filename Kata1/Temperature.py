@@ -46,7 +46,7 @@ class Temperature:
                 result = 0
                 self.grade = 0
                 self.scale = "No valido"
-            return Temperature(self.grade + result, self.scale)
+            return Temperature(round(self.grade + result, 2), self.scale)
         else:
             return "No Valid"
 
@@ -62,7 +62,7 @@ class Temperature:
                 result = 0
                 self.grade = 0
                 self.scale = "No valido"
-            return Temperature(self.grade - result, self.scale)
+            return Temperature(round(self.grade - result, 2), self.scale)
         else:
             return "No Valid"
 
@@ -78,7 +78,7 @@ class Temperature:
                 result = 0
                 self.grade = 0
                 self.scale = "No valido"
-            return Temperature(self.grade * result, self.scale)
+            return Temperature(round(self.grade * result, 2), self.scale)
         else:
             return "No Valid"
 
@@ -94,6 +94,6 @@ class Temperature:
                 result = 0
                 self.grade = 0
                 self.scale = "No valido"
-            return Temperature(self.grade / result, self.scale)
+            return Temperature(round(self.grade / result, 2), self.scale)
         else:
             return "No Valid"
