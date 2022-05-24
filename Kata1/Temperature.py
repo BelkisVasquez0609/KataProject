@@ -2,7 +2,7 @@ def __toFarenheit__(grade, scale):
     if scale == "C":
         F = (grade * (9 / 5)) + 32
     elif scale == "K":
-        F = 1.8 * (grade - 273.15) + 32
+        F =  (grade - 273.15) * (9/5) + 32
     else:
         F = grade
     return F
