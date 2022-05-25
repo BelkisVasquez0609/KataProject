@@ -1,3 +1,4 @@
+# Method to convert to Fahrenheit
 def __toFahrenheit__(grade, scale):
     if scale == "C":
         F = (grade * (9 / 5)) + 32
@@ -8,6 +9,7 @@ def __toFahrenheit__(grade, scale):
     return F
 
 
+# Method to convert to Celsius
 def __toCelsius__(grade, scale):
     if scale == "F":
         C = (grade - 32) * (5 / 9)
@@ -18,6 +20,7 @@ def __toCelsius__(grade, scale):
     return C
 
 
+# Method to convert to Kelvin
 def __toKelvin__(grade, scale):
     if scale == "C":
         K = (grade + 273.15)
@@ -29,11 +32,12 @@ def __toKelvin__(grade, scale):
 
 
 class TemperatureKata3:
-
+    # Constructor
     def __init__(self, Grade, Scale):
         self.grade = Grade
         self.scale = Scale
 
+    # Add operation
     def __add__(self, other):
         if isinstance(other, TemperatureKata3):
             if self.scale == "F":
@@ -46,11 +50,11 @@ class TemperatureKata3:
                 result = 0
                 self.grade = 0
                 self.scale = "No Valid"
-            return round((self.grade + Result), 2), self.scale
+            return round((self.grade + Result), 2), self.scale  # return the result
         else:
-            return "No valid"
+            return "No valid"  # if is not this instance
 
-
+    # substract operation
     def __substractBy__(self, other):
         if isinstance(other, TemperatureKata3):
             if self.scale == "F":
@@ -63,10 +67,11 @@ class TemperatureKata3:
                 result = 0
                 self.grade = 0
                 self.scale = "No Valid"
-            return round((self.grade - Result), 2), self.scale
+            return round((self.grade - Result), 2), self.scale  # return the result
         else:
-            return "No valid"
+            return "No valid"  # if is not this instance
 
+    # multiplicate operation
     def __multiplicateBy__(self, other):
         if isinstance(other, TemperatureKata3):
             if self.scale == "F":
@@ -79,10 +84,11 @@ class TemperatureKata3:
                 result = 0
                 self.grade = 0
                 self.scale = "No Valid"
-            return round((self.grade * Result), 2), self.scale
+            return round((self.grade * Result), 2), self.scale  # return the result
         else:
-            return "No valid"
+            return "No valid"  # if is not this instance
 
+    # divide operation
     def __divideBy__(self, other):
         if isinstance(other, TemperatureKata3):
             if self.scale == "F":
@@ -95,6 +101,6 @@ class TemperatureKata3:
                 result = 0
                 self.grade = 0
                 self.scale = "No Valid"
-            return round((self.grade / Result), 2), self.scale
+            return round((self.grade / Result), 2), self.scale  # return the result
         else:
-            return "No valid"
+            return "No valid"  # if is not this instance
